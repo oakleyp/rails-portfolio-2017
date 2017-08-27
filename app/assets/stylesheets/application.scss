@@ -129,7 +129,7 @@ body {
       margin-bottom: 0%;
       width: 25%;
       height: auto;
-      background: url('/assets/post_note.png') center center no-repeat;
+      background: image_url('/assets/post_note.png') center center no-repeat;
       background-size: contain;
       list-style-type: none;
       padding: 5px;
@@ -257,7 +257,7 @@ html { height: 100%;}
 #page-content-wrapper {
   width: 100%;
   padding-top: 30px;
-  background: url('/assets/portfolio-fullpage-mockup-web.jpg') top right no-repeat;
+  background: image_url('/assets/portfolio-fullpage-mockup-web.jpg') top right no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
