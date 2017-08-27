@@ -1,0 +1,225 @@
+<div class="homepage-hero-module">
+    <div class="video-container">
+        <div class="filter"></div>
+       <video autoplay loop class="fillWidth">
+            <source src="/assets/jellyfish3.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+            <!-- <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. -->
+        </video>
+        <div class="poster hidden">
+            <img src="/assets/aquarium.jpg" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="wrapper" class="toggled">
+  <div class="overlay"></div>
+
+  <!-- Sidebar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+      <button type="button" class="hamburger is-open" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+      </button>
+      <ul class="nav sidebar-nav">
+          <li class="sidebar-brand">
+            <a href="#home">OP</a>
+          </li>
+          <li id="homeli" class="nav-item nav-active text-center">
+              <a href="#home">Home</a>
+          </li>
+          <li id="aboutli" class="nav-item text-center">
+              <a href="#about">About</a>
+          </li>
+          <li id="projectsli" class="nav-item text-center">
+              <a href="#projects">Projects</a>
+          </li>
+      </ul>
+      <div class="divider-line"></div>
+      <div class="sidebar-social">
+        <a href="mailto:oakleypeavler@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/oakleyp/"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://www.github.com/oakleyp"><i class="fa fa-github"></i></a>
+      </div>
+      
+  </nav>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+      <div id="home" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+                  <%= image_tag 'portfolio-mynameis.png', class: 'mynameis-img' %>
+              </div>
+          </div>
+      </div>
+      <div id="about" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+                  <h1 class="sharpie-heading">About Me</h1>
+                  <p class="about-sharpie-text">- Working with over six years' experience in software development, I thrive on conquering intimidating challenges and learning
+                  new ways to write dynamic, beautiful, operationally bulletproof code that brings ambitious ideas to their envisioned awe-inspiring,
+                  unanimously-beloved fruition as a product that the real world can depend on.</p>
+
+                  <h2>Languages and technologies I've worked with:</h2>
+                  <ul class="postit-container">
+                    <li><%= image_tag 'html-css-js.png', class: 'postit-img', style: 'margin-top: 8%' %></li>
+                    <li><%= image_tag 'jquery.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'es6.png', class: 'postit-img', style: 'margin-top: 6%' %></li>
+                    <li><%= image_tag 'nodejs.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'rails.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                    <li><%= image_tag 'php-mysql.png', class: 'postit-img', style: 'margin-top: 7%' %></li>
+                    <li><%= image_tag 'cpp.png', class: 'postit-img', style: 'margin-top: 3%' %></li>
+                    <li><%= image_tag 'csharp.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'java.png', class: 'postit-img' %></li>
+                    <li><%= image_tag 'android.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                    <li><%= image_tag 'psql.png', class: 'postit-img' %></li>
+                    <li><%= image_tag 'git.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div id="projects" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+                  <h1>Project Spotlight</h1>
+                  <ul class="project-list">
+                    <li>
+                        
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = true;
+
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        //overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        //overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+  
+    $('[data-toggle="offcanvas"]').click(function () {
+          $('#wrapper').toggleClass('toggled');
+    });  
+
+    //jquery smooth scroll
+    var $root = $('html, body');
+    $('a').click(function() {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 900);
+        return false;
+    });
+
+    //HTML5 bg video
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+//Change nav highlights on scroll
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    //About is past 520px
+    if(scroll >= 520 && !$('#aboutli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#aboutli').addClass('nav-active');
+    } 
+    //Projects screen is past home+about height = 1520px
+    if(scroll >= 1520 && !$('#projectsli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#projectsli').addClass('nav-active');
+    } 
+    //Home screen is 520px
+    if (scroll <= 520 && !$('#homeli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#homeli').addClass('nav-active');
+    } 
+}).scroll();
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+
+
+</script>

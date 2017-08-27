@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stars: 1
+  comment: MyText
+  ip_address: MyString
+
+two:
+  stars: 1
+  comment: MyText
+  ip_address: MyString

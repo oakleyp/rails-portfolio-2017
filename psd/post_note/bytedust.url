@@ -1,0 +1,7 @@
+[DEFAULT]
+BASEURL=http://www.bytedust.com/
+[InternetShortcut]
+URL=http://www.bytedust.com/
+IconFile=C:\WINDOWS\system32\SHELL32.dll
+IconIndex=220
+HotKey=0

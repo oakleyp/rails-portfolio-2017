@@ -1,0 +1,337 @@
+<div id="wrapper" class="toggled">
+  <div class="overlay"></div>
+
+  <!-- Sidebar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+      <button type="button" class="hamburger is-open" data-toggle="offcanvas">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+      </button>
+      <ul class="nav sidebar-nav">
+          <li class="sidebar-brand">
+            <a href="#home">OP</a>
+          </li>
+          <li id="homeli" class="nav-item nav-active text-center">
+              <a href="#home">Hello</a>
+          </li>
+          <li id="aboutli" class="nav-item text-center">
+              <a href="#about">About</a>
+          </li>
+          <li id="projectsli" class="nav-item text-center">
+              <a href="#projects">Projects</a>
+          </li>
+      </ul>
+      <div class="divider-line"></div>
+      <div class="sidebar-social">
+        <a href="mailto:oakleypeavler@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/oakleyp/"><i class="fa fa-linkedin-square"></i></a>
+        <a href="https://www.github.com/oakleyp"><i class="fa fa-github"></i></a>
+      </div>
+      <div class="sidebar-description">
+        <p>This is an experimental one-page site using Rails, jQuery and Photoshop. Your feedback is very much appreciated!</p>
+
+        <span class="star-rating"><i class="star-unlit" data-star-num="1"></i><i class="star-unlit" data-star-num="2"></i><i class="star-unlit" data-star-num="3"></i><i class="star-unlit" data-star-num="4"></i><i class="star-unlit" data-star-num="5"></i></span>
+        <span class="rating-ct"></span>
+        <span class="result-msg"></span>
+      </div>
+      
+  </nav>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+      <div id="home" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+              </div>
+          </div>
+      </div>
+      <div id="about" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+                  <div class="about-content">
+                  <p>Working with over six years' experience in software development, I thrive on conquering intimidating challenges and learning
+                  new ways to write dynamic, beautiful, operationally near-bulletproof code that brings ambitious ideas to awe-inspiring,
+                  unanimously-beloved fruition as a product that the real world can depend on - not to mention coffee.</p>
+
+                  <h2>Languages and technologies I've worked with:</h2>
+                  <ul class="postit-container">
+                    <li><%= image_tag 'html-css-js.png', class: 'postit-img', style: 'margin-top: 8%' %></li>
+                    <li><%= image_tag 'jquery.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'es6.png', class: 'postit-img', style: 'margin-top: 6%' %></li>
+                    <li><%= image_tag 'nodejs.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'rails.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                    <li><%= image_tag 'php-mysql.png', class: 'postit-img', style: 'margin-top: 7%' %></li>
+                    <li><%= image_tag 'cpp.png', class: 'postit-img', style: 'margin-top: 3%' %></li>
+                    <li><%= image_tag 'csharp.png', class: 'postit-img', style: 'margin-top: 4%' %></li>
+                    <li><%= image_tag 'java.png', class: 'postit-img' %></li>
+                    <li><%= image_tag 'android.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                    <li><%= image_tag 'psql.png', class: 'postit-img' %></li>
+                    <li><%= image_tag 'git.png', class: 'postit-img', style: 'margin-top: 2%' %></li>
+                  </ul>
+                 </div>
+              </div>
+          </div>
+      </div>
+      <div id="projects" class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 section-content">
+                  <ul class="project-list">
+                    <a href="https://github.com/oakleyp/VapeLex.com" target="_blank">
+                    <li>
+                       <div class="image-container"> 
+                        <%= image_tag 'vapelex-poster.png' %> 
+                        <span>VapeLex.com</span>
+                       </div>
+                       <p>- VapeLex.com was an online e-cigarette supply shop with PHP & MySQL backend and Authorize.net API payment gateway, built from the ground up with a custom ajax shopping cart and order management system.</p>
+                    </li>
+                    </a>
+                    <a href="https://github.com/oakleyp/chess-game" target="_blank">
+                    <li>
+                       <div class="image-container"> 
+                        <%= image_tag 'chess-poster.png' %> 
+                        <span>ES6 Chess</span>
+                       </div>
+                       <p>This game of chess was built from scratch in ES6 and CSS3 over the course of 6 days and features both player-vs-player and player-vs-computer modes</p>
+                    </li>
+                    </a>
+                    <a href="https://github.com/oakleyp/serenity_exploit_pack" target="_blank">
+                    <li>
+                       <div class="image-container"> 
+                        <%= image_tag 'serenity-poster.png' %> 
+                        <span>Serenity Exploit Pack</span>
+                       </div>
+                       <p>My first full-fledged web app and the kindling for my love of code: a user-friendly multi-vulnerability software exploit tester that generates dynamically obfuscated javascript and shellcode - for research purposes.</p>
+                    </li>
+                    </a>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<div class="video-container">
+    <div class="filter"></div>
+        <video autoplay loop class="fillWidth">
+        <source src="/assets/jellyfish3.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser to the latest version of Chrome by downloading it <a href="http://www.google.com/chrome/">Here</a>
+    </video>
+    <div class="poster hidden">
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  let starAvg = 0;
+  $(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = true;
+
+    trigger.click(function () {
+      hamburger_cross();      
+    });
+
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        //overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        //overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+  
+    $('[data-toggle="offcanvas"]').click(function () {
+          $('#wrapper').toggleClass('toggled');
+    });  
+
+    //Smooth scroll for navigation clicks
+    var $root = $('html, body');
+    $('a').click(function() {
+        $root.animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 900);
+        return false;
+    });
+
+    //Fill star rating
+    setAvgRating();
+
+
+    //HTML5 bg video
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function() {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+
+});
+
+//Change nav highlights on scroll
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+    //About is past 520px
+    if(scroll >= 520 && !$('#aboutli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#aboutli').addClass('nav-active');
+    } 
+    //Projects screen is past home+about height = 1520px
+    if(scroll >= 1900 && !$('#projectsli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#projectsli').addClass('nav-active');
+    } 
+    //Home screen is around 700px
+    if (scroll <= 700 && !$('#homeli').attr('class').split(' ').includes('nav-active')) {
+      $('.nav-active').removeClass('nav-active');
+      $('#homeli').addClass('nav-active');
+    } 
+}).scroll();
+
+
+/* -----  AJAX Star Rating functions ----- */
+
+$(".star-rating > i").hover(
+    function mouseIn() {
+        let starNum = parseInt($(this).attr('data-star-num'));
+        highlightStarRating(starNum);
+    },
+    function mouseOut() {
+        fillStarRating(starAvg);
+});
+
+$(".star-rating > i").click(function() {
+    let starNum = parseInt($(this).attr('data-star-num'));
+
+    //TODO: Make comment feature?
+    postRating(starNum, 'submit_rating');
+});
+
+function postRating(starNum, url) {
+    let data = {
+        stars: starNum,
+        comment: ''
+    }
+    $.post(url, {rating: { stars: starNum, comment: ''}} )
+    .done(function (data) {
+        if(data.status == "fail") {
+            $('.result-msg').html(data.message);
+        } else if(data.status == "success") {
+            setAvgRating();
+            $('.result-msg').html(data.message);
+        }
+    });
+}
+
+//AJAX request all ratings, update starAvg, run fillStarRating, and update .rating-ct
+function setAvgRating() {
+    $.getJSON("ratings", function (data) {
+        let sum = 0,
+        avg = 0;
+        $.each(data, function(key, val) {
+            sum += parseInt(val.stars);
+        });
+        if(data.length) avg = Math.ceil(sum/data.length);
+        console.log(data.length);
+        console.log(sum);
+        starAvg = avg;
+        fillStarRating(avg);
+        $('.rating-ct').html(`/&nbsp;${data.length}`);
+    })
+}
+
+//Highlights number of given stars from left
+function highlightStarRating(num) {
+    $('.star-rating > i').each(function(index) {
+        if(index < num) {
+            $(this).removeClass();
+            $(this).addClass('star-lit');
+        } else {
+            $(this).removeClass();
+            $(this).addClass('star-unlit');
+        }
+    })
+}
+
+//Fills given number of stars from left
+function fillStarRating(num) {
+    //Populate star ratings elem
+    $('.star-rating > i').each(function(index) {
+        if(index < num) {
+            $(this).removeClass();
+            $(this).addClass('star-filled');
+        } else {
+            $(this).removeClass();
+            $(this).addClass('star-unlit');
+        }
+    })
+
+}
+
+
+/* ----- BG Video Functions ----- */
+
+function scaleVideoContainer() {
+
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height',unitHeight);
+
+}
+
+function initBannerVideoSize(element){
+
+    $(element).each(function(){
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+
+    scaleBannerVideoSize(element);
+
+}
+
+function scaleBannerVideoSize(element){
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    // console.log(windowHeight);
+
+    $(element).each(function(){
+        var videoAspectRatio = $(this).data('height')/$(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if(windowWidth < 1000){
+            videoHeight = windowHeight;
+            videoWidth = videoHeight / videoAspectRatio;
+            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
+
+            $(this).width(videoWidth).height(videoHeight);
+        }
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+
+    });
+}
+
+
+</script>
